@@ -25,6 +25,8 @@ import {
     ActiveMenuDirective,
     ErrorComponent
 } from './layouts';
+import { PiNavbarComponent } from './layouts/pi-navbar/pi-navbar.component';
+import { PiMainComponent } from './layouts/pi-main/pi-main.component';
 
 @NgModule({
     imports: [
@@ -44,7 +46,9 @@ import {
         ErrorComponent,
         PageRibbonComponent,
         ActiveMenuDirective,
-        FooterComponent
+        FooterComponent,
+        PiNavbarComponent,
+        PiMainComponent
     ],
     providers: [
         ProfileService,
@@ -52,6 +56,6 @@ import {
         PaginationConfig,
         UserRouteAccessService
     ],
-    bootstrap: [ JhiMainComponent ]
+    bootstrap: [ PiMainComponent ]
 })
 export class ProyectoIntegradorAppModule {}
