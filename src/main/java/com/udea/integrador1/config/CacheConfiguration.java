@@ -45,6 +45,18 @@ public class CacheConfiguration {
             cm.createCache(com.udea.integrador1.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.udea.integrador1.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.udea.integrador1.domain.SocialUserConnection.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Region.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Country.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Location.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Department.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Department.class.getName() + ".employees", jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Task.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Task.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Employee.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Employee.class.getName() + ".jobs", jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Job.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Job.class.getName() + ".tasks", jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.JobHistory.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
