@@ -9,6 +9,7 @@ import { ProyectoIntegradorHomeModule } from './home/home.module';
 import { ProyectoIntegradorAdminModule } from './admin/admin.module';
 import { ProyectoIntegradorAccountModule } from './account/account.module';
 import { ProyectoIntegradorEntityModule } from './entities/entity.module';
+import { ProyectoIntegradorCoursesModule } from './courses/courses.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -38,6 +39,7 @@ import { PiMainComponent } from './layouts/pi-main/pi-main.component';
         ProyectoIntegradorAdminModule,
         ProyectoIntegradorAccountModule,
         ProyectoIntegradorEntityModule,
+        ProyectoIntegradorCoursesModule,
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [
