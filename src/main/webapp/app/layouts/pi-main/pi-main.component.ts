@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRouteSnapshot, NavigationEnd } from '@angular/router';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'jhi-pi-main',
