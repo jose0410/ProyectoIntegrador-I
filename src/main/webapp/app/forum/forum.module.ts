@@ -1,15 +1,15 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ProyectoIntegradorSharedModule } from '../shared';
-import { COURSES_ROUTE, CoursesComponent } from './';
+import { FORUM_ROUTE, ForumComponent } from './';
 
 @NgModule({
     imports: [
         ProyectoIntegradorSharedModule,
-        RouterModule.forRoot([COURSES_ROUTE], { useHash: true })
+        RouterModule.forRoot([FORUM_ROUTE], { useHash: true })
     ],
     declarations: [
-        CoursesComponent,
+        ForumComponent,
     ],
     entryComponents: [
     ],
@@ -17,4 +17,4 @@ import { COURSES_ROUTE, CoursesComponent } from './';
     ],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ProyectoIntegradorCoursesModule {}
+export class ProyectoIntegradorForumModule {}

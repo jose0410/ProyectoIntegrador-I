@@ -10,6 +10,8 @@ import { ProyectoIntegradorAdminModule } from './admin/admin.module';
 import { ProyectoIntegradorAccountModule } from './account/account.module';
 import { ProyectoIntegradorEntityModule } from './entities/entity.module';
 import { ProyectoIntegradorCoursesModule } from './courses/courses.module';
+import { ProyectoIntegradorForumModule } from './forum/forum.module';
+import { ProyectoIntegradorProfileModule } from './profile/profile.module';
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -28,6 +30,8 @@ import {
 } from './layouts';
 import { PiNavbarComponent } from './layouts/pi-navbar/pi-navbar.component';
 import { PiMainComponent } from './layouts/pi-main/pi-main.component';
+import { ForumComponent } from './forum/forum.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
     imports: [
@@ -40,6 +44,8 @@ import { PiMainComponent } from './layouts/pi-main/pi-main.component';
         ProyectoIntegradorAccountModule,
         ProyectoIntegradorEntityModule,
         ProyectoIntegradorCoursesModule,
+        ProyectoIntegradorForumModule,
+        ProyectoIntegradorProfileModule
         // jhipster-needle-angular-add-module JHipster will add new module here
     ],
     declarations: [
