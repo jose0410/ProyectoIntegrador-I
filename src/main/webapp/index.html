@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="es" dir="ltr">
 <head>
-    <base href="./" />
+    <base href="./"/>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ProyectoIntegrador</title>
@@ -9,43 +9,49 @@
     <meta name="google" value="notranslate">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
-    <link rel="shortcut icon" href="favicon.ico" />
-    <link rel="manifest" href="manifest.webapp" />
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="manifest" href="manifest.webapp"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="swagger-ui/style.css">
 </head>
 <body>
-    <!--[if lt IE 9]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <jhi-main></jhi-main>
+<!--[if lt IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<jhi-pi-main></jhi-pi-main>
+<script>
+    // load shim for IE
+    if (window.navigator.userAgent.indexOf('Trident/') > 0) {
+        var script = document.createElement('script');
+        script.src = 'core-js-shim.min.js';
+        script.type = 'text/javascript';
+        document.getElementsByTagName('head')[0].appendChild(script)
+    }
+</script>
+<noscript>
+    <h1>You must enable javascript to view this page.</h1>
+</noscript>
+<!-- uncomment this for adding service worker
     <script>
-        // load shim for IE
-        if (window.navigator.userAgent.indexOf('Trident/') > 0) {
-            var script = document.createElement('script');
-            script.src = 'core-js-shim.min.js';
-            script.type = 'text/javascript';
-            document.getElementsByTagName('head')[0].appendChild(script)
+        if ('serviceWorker' in navigator) {
+             navigator.serviceWorker
+                .register('./sw.js')
+                .then(function() { console.log('Service Worker Registered'); });
         }
     </script>
-    <noscript>
-        <h1>You must enable javascript to view this page.</h1>
-    </noscript>
-    <!-- uncomment this for adding service worker
-        <script>
-            if ('serviceWorker' in navigator) {
-                 navigator.serviceWorker
-                    .register('./sw.js')
-                    .then(function() { console.log('Service Worker Registered'); });
-            }
-        </script>
-    -->
-    <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
-    <script>
-        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-        e.src='//www.google-analytics.com/analytics.js';
-        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-        ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>-->
+-->
+<!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-XXXXX-X');ga('send','pageview');
+</script>-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 </html>
