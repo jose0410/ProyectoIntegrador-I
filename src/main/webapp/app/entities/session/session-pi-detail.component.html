@@ -1,0 +1,43 @@
+
+<div *ngIf="session">
+    <h2><span jhiTranslate="proyectoIntegradorApp.session.detail.title">Session</span> {{session.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="proyectoIntegradorApp.session.name">Name</span></dt>
+        <dd>
+            <span>{{session.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="proyectoIntegradorApp.session.description">Description</span></dt>
+        <dd>
+            <span>{{session.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="proyectoIntegradorApp.session.semester">Semester</span></dt>
+        <dd>
+            <span>{{session.semester}}</span>
+        </dd>
+        <dt><span jhiTranslate="proyectoIntegradorApp.session.date">Date</span></dt>
+        <dd>
+            <span>{{session.date | date:'medium'}}</span>
+        </dd>
+        <dt><span jhiTranslate="proyectoIntegradorApp.session.course">Course</span></dt>
+        <dd>
+            <div *ngIf="session.courseId">
+                <a [routerLink]="['/course-pi', session.courseId]">{{session.courseId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'session-pi/'+ session.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

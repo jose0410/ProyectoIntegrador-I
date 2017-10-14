@@ -1,0 +1,39 @@
+
+<div *ngIf="course">
+    <h2><span jhiTranslate="proyectoIntegradorApp.course.detail.title">Course</span> {{course.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="proyectoIntegradorApp.course.name">Name</span></dt>
+        <dd>
+            <span>{{course.name}}</span>
+        </dd>
+        <dt><span jhiTranslate="proyectoIntegradorApp.course.subject">Subject</span></dt>
+        <dd>
+            <span>{{course.subject}}</span>
+        </dd>
+        <dt><span jhiTranslate="proyectoIntegradorApp.course.description">Description</span></dt>
+        <dd>
+            <span>{{course.description}}</span>
+        </dd>
+        <dt><span jhiTranslate="proyectoIntegradorApp.course.professor">Professor</span></dt>
+        <dd>
+            <div *ngIf="course.professorId">
+                <a [routerLink]="['/professor-pi', course.professorId]">{{course.professorId}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'course-pi/'+ course.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

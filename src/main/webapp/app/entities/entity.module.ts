@@ -8,6 +8,9 @@ import { ProyectoIntegradorTaskMySuffixModule } from './task/task-my-suffix.modu
 import { ProyectoIntegradorEmployeeMySuffixModule } from './employee/employee-my-suffix.module';
 import { ProyectoIntegradorJobMySuffixModule } from './job/job-my-suffix.module';
 import { ProyectoIntegradorJobHistoryMySuffixModule } from './job-history/job-history-my-suffix.module';
+import { ProyectoIntegradorCoursePiModule } from './course/course-pi.module';
+import { ProyectoIntegradorSessionPiModule } from './session/session-pi.module';
+import { ProyectoIntegradorProfessorPiModule } from './professor/professor-pi.module';
 /* jhipster-needle-add-entity-module-import - JHipster will add entity modules imports here */
 
 @NgModule({
@@ -20,6 +23,9 @@ import { ProyectoIntegradorJobHistoryMySuffixModule } from './job-history/job-hi
         ProyectoIntegradorEmployeeMySuffixModule,
         ProyectoIntegradorJobMySuffixModule,
         ProyectoIntegradorJobHistoryMySuffixModule,
+        ProyectoIntegradorCoursePiModule,
+        ProyectoIntegradorSessionPiModule,
+        ProyectoIntegradorProfessorPiModule,
         /* jhipster-needle-add-entity-module - JHipster will add entity modules here */
     ],
     declarations: [],

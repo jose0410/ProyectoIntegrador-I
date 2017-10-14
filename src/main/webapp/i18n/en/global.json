@@ -15,6 +15,9 @@
                 "employeeMySuffix": "Employee",
                 "jobMySuffix": "Job",
                 "jobHistoryMySuffix": "Job History",
+                "coursePi": "Course",
+                "sessionPi": "Session",
+                "professorPi": "Professor",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {

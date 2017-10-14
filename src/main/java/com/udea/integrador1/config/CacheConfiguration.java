@@ -57,6 +57,11 @@ public class CacheConfiguration {
             cm.createCache(com.udea.integrador1.domain.Job.class.getName(), jcacheConfiguration);
             cm.createCache(com.udea.integrador1.domain.Job.class.getName() + ".tasks", jcacheConfiguration);
             cm.createCache(com.udea.integrador1.domain.JobHistory.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Course.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Course.class.getName() + ".sessions", jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Session.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Professor.class.getName(), jcacheConfiguration);
+            cm.createCache(com.udea.integrador1.domain.Professor.class.getName() + ".courses", jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
