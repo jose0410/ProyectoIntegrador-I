@@ -6,3 +6,4 @@ export * from './course-pi-delete-dialog.component';
 export * from './course-pi-detail.component';
 export * from './course-pi.component';
 export * from './course-pi.route';
+export * from './course-pi.module';

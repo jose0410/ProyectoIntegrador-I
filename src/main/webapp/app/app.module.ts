@@ -9,7 +9,7 @@ import { ProyectoIntegradorHomeModule } from './home/home.module';
 import { ProyectoIntegradorAdminModule } from './admin/admin.module';
 import { ProyectoIntegradorAccountModule } from './account/account.module';
 import { ProyectoIntegradorEntityModule } from './entities/entity.module';
-import { ProyectoIntegradorCoursesModule } from './courses/courses.module';
+import { ProyectoIntegradorCoursePiModule } from './entities/course/course-pi.module';
 import { ProyectoIntegradorForumModule } from './forum/forum.module';
 import { ProyectoIntegradorProfileModule } from './profile/profile.module';
 
@@ -43,7 +43,7 @@ import { ProfileComponent } from './profile/profile.component';
         ProyectoIntegradorAdminModule,
         ProyectoIntegradorAccountModule,
         ProyectoIntegradorEntityModule,
-        ProyectoIntegradorCoursesModule,
+        ProyectoIntegradorCoursePiModule,
         ProyectoIntegradorForumModule,
         ProyectoIntegradorProfileModule
         // jhipster-needle-angular-add-module JHipster will add new module here
