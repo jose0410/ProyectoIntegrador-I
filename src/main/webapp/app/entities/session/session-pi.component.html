@@ -1,0 +1,68 @@
+<div>
+    <h2>
+        <span jhiTranslate="proyectoIntegradorApp.session.home.title">Sessions</span>
+        <button class="btn btn-primary float-right jh-create-entity create-session-pi" [routerLink]="['/', { outlets: { popup: ['session-pi-new'] } }]">
+            <span class="fa fa-plus"></span>
+            <span  jhiTranslate="proyectoIntegradorApp.session.home.createLabel">
+            Create new Session
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <div class="row">
+    </div>
+    <br/>
+    <div class="table-responsive" *ngIf="sessions">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+            <th><span jhiTranslate="global.field.id">ID</span></th>
+            <th><span jhiTranslate="proyectoIntegradorApp.session.name">Name</span></th>
+            <th><span jhiTranslate="proyectoIntegradorApp.session.description">Description</span></th>
+            <th><span jhiTranslate="proyectoIntegradorApp.session.semester">Semester</span></th>
+            <th><span jhiTranslate="proyectoIntegradorApp.session.date">Date</span></th>
+            <th><span jhiTranslate="proyectoIntegradorApp.session.course">Course</span></th>
+            <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let session of sessions ;trackBy: trackId">
+                <td><a [routerLink]="['../session-pi', session.id ]">{{session.id}}</a></td>
+                <td>{{session.name}}</td>
+                <td>{{session.description}}</td>
+                <td>{{session.semester}}</td>
+                <td>{{session.date | date:'medium'}}</td>
+                <td>
+                    <div *ngIf="session.courseId">
+                        <a [routerLink]="['../course-pi', session.courseId  ]" >{{session.courseId}}</a>
+                    </div>
+                </td>
+                <td class="text-right">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                [routerLink]="['../session-pi', session.id ]"
+                                class="btn btn-info btn-sm">
+                            <span class="fa fa-eye"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'session-pi/'+ session.id + '/edit'} }]"
+                                replaceUrl="true"
+                                class="btn btn-primary btn-sm">
+                            <span class="fa fa-pencil"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                        </button>
+                        <button type="submit"
+                                [routerLink]="['/', { outlets: { popup: 'session-pi/'+ session.id + '/delete'} }]"
+                                replaceUrl="true"
+                                class="btn btn-danger btn-sm">
+                            <span class="fa fa-remove"></span>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
